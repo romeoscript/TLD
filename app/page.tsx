@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Hero from "./components/Hero";
+import Presence from "./components/Presence";
 import ServiceDigital from "./components/ServiceDigital";
 import Services from "./components/Services";
 import SwiperSlider from "./components/SwiperSlider";
@@ -23,6 +24,7 @@ export default function Home() {
       />
         <Testimonial />
       </section>
+      <Presence />
     </main>
   );
 }
