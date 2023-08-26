@@ -2,6 +2,7 @@ import Image from "next/image";
 import Hero from "./components/Hero";
 import ServiceDigital from "./components/ServiceDigital";
 import Services from "./components/Services";
+import SwiperSlider from "./components/SwiperSlider";
 import Why from "./components/Why";
 
 export default function Home() {
@@ -11,6 +12,7 @@ export default function Home() {
       <ServiceDigital />
       <Why />
       <Services />
+      <SwiperSlider/>
     </main>
   );
 }
