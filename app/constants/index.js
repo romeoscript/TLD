@@ -1,3 +1,9 @@
+import rec1 from '../images/rectangle 34.png'
+import rec2 from '../images/rectangle 35.png'
+import rec3 from '../images/rectangle 36.png'
+import rec4 from '../images/rectangle 37.png'
+import rec5 from '../images/rectangle 38.png'
+import rec6 from '../images/rectangle 39.png'
 
 export const navLinks = [
   {
@@ -117,5 +123,38 @@ export const support = [
   },
   
 ];
+
+export const teamInfo = [
+    {
+        img: rec1,
+        name:'jane doe',
+        position:'CEO'
+    },
+    {
+        img: rec2,
+        name:'jane doe',
+        position:'President,Growth'
+    },
+    {
+        img: rec3,
+        name:'jane doe',
+        position:'VP, Sales'
+    },
+    {
+        img: rec4,
+        name:'jane doe',
+        position:'VP, Marketing'
+    },
+    {
+        img: rec5,
+        name:'jane doe',
+        position:'VP, Media'
+    },
+    {
+        img: rec6,
+        name:'jane doe',
+        position:'DIrector, Accounting'
+    },
+]
 
 
