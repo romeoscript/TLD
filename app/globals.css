@@ -37,3 +37,17 @@ body {
   }
 }
 
+.dark-overlay {
+  position: relative;
+}
+
+.dark-overlay::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5)!important;  /* Adjust the 0.5 value to make it darker or lighter */
+  border-radius: inherit;
+}
