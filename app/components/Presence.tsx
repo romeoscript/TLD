@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
+import axios from "axios";
 import bg from "../images/bg.png";
 import { usePathname } from "next/navigation";
 import Box from "@mui/material/Box";
@@ -21,8 +22,8 @@ const style = {
   left: "50%",
   transform: "translate(-50%, -50%)",
   width: "70%",
-  overflow:'auto',
-  height:'80vh!important',
+  overflow: "auto",
+  height: "80vh!important",
   bgcolor: "background.paper",
   border: "2px solid #000",
   boxShadow: 24,
@@ -35,6 +36,34 @@ interface BasicModalProps {
 }
 
 const BasicModal: React.FC<BasicModalProps> = ({ open, handleClose }) => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+    const formData = new FormData(event.currentTarget);
+    const data = {
+      name: formData.get("fullname"),
+      email: formData.get("email"),
+      phoneNumber: formData.get("product-service-field"),
+      productOrService: formData.get("product-service-description"),
+      businessSize: formData.get("businessSize"),
+      budget: formData.get("budget"),
+      virtualMeetingDate: formData.get("virtual-meeting-date"),
+    };
+    console.log(data);
+
+    try {
+      const response = await axios.post(
+        "api/quote",
+        data
+      );
+      console.log("Form submitted successfully", response.data);
+      // Handle success or any response data
+    } catch (error) {
+      console.error("Error submitting form", error);
+      // Handle error
+    }
+  };
+
   return (
     <Modal
       open={open}
@@ -43,17 +72,16 @@ const BasicModal: React.FC<BasicModalProps> = ({ open, handleClose }) => {
       aria-describedby="modal-modal-description"
     >
       <Box sx={style}>
-        <form action="" className="w-full text-black z-30">
+        <form onSubmit={handleSubmit} className="w-full text-black z-30">
           <h2 className="text-center font-bold text-3xl my-[1rem]">
             Fill the <span className="text-[#F16232]">Form</span> Below
           </h2>
-
           <div className="flex items-center gap-[5%] z-20">
             <div className="w-full">
               <FormLabel htmlFor="name-field" className="required-label ">
                 Name <span className="text-[red]">*</span>
               </FormLabel>
-              <TextField className="w-[98%]" id="name-field" label="fullname" />
+              <TextField className="w-[98%]" name="fullname" id="fullname" label="fullname" />
             </div>
             <div className="w-full">
               <FormLabel htmlFor="email-field" className="required-label ">
@@ -61,12 +89,12 @@ const BasicModal: React.FC<BasicModalProps> = ({ open, handleClose }) => {
               </FormLabel>
               <TextField
                 className="w-[98%]"
-                id="email-field"
+                id="email"
+                name="email"
                 label="Work email"
               />
             </div>
           </div>
-
           <figure className="my-[2rem]">
             <FormLabel
               htmlFor="product-service-field"
@@ -77,6 +105,7 @@ const BasicModal: React.FC<BasicModalProps> = ({ open, handleClose }) => {
             <TextField
               className="w-full"
               id="product-service-field"
+              name="product-service-field"
               label="your whatsapp number "
             />
           </figure>
@@ -91,6 +120,8 @@ const BasicModal: React.FC<BasicModalProps> = ({ open, handleClose }) => {
             <TextField
               label="You can begin by stating the name of your brand"
               className="w-full"
+              id="product-service-description"
+              name="product-service-description"
               variant="outlined"
               multiline
               rows={4}
@@ -98,7 +129,7 @@ const BasicModal: React.FC<BasicModalProps> = ({ open, handleClose }) => {
           </figure>
           <FormControl component="fieldset">
             <FormLabel component="legend">BUSINESS SIZE</FormLabel>
-            <RadioGroup aria-label="businessSize" name="businessSize">
+            <RadioGroup aria-label="businessSize" id='businessSize' name="businessSize">
               <FormControlLabel
                 value="small"
                 control={<Radio />}
@@ -121,7 +152,7 @@ const BasicModal: React.FC<BasicModalProps> = ({ open, handleClose }) => {
             <FormLabel component="legend">
               WHAT IS YOUR BUDGET FOR THIS PROJECT?
             </FormLabel>
-            <RadioGroup aria-label="budget" name="budget">
+            <RadioGroup aria-label="budget" name="budget"  id="budget">
               <FormControlLabel
                 value="basic"
                 control={<Radio />}
@@ -139,7 +170,6 @@ const BasicModal: React.FC<BasicModalProps> = ({ open, handleClose }) => {
               />
             </RadioGroup>
           </FormControl>
-
           <figure className="my-[2rem]">
             <FormLabel
               htmlFor="product-service-field"
@@ -150,11 +180,14 @@ const BasicModal: React.FC<BasicModalProps> = ({ open, handleClose }) => {
             </FormLabel>
             <TextField
               className="w-full"
-              id="product-service-field"
+              id="virtual-meeting-date"
+              name="virtual-meeting-date"
               type="date"
-              
             />
           </figure>
+          <Button type="submit" variant="contained" color="primary">
+            Submit
+          </Button>
         </form>
       </Box>
     </Modal>
