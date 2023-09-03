@@ -4,7 +4,7 @@ import nodemailer from "nodemailer";
 
 // Create a transporter for sending emails
 const transporter = nodemailer.createTransport({
-  host: "smpt.zoho.com",
+  host: "smtp.zoho.com",
   secure: true,
   port: 465,
   auth: {
@@ -39,11 +39,22 @@ export const POST = async (req) => {
 
     // Send email
     const mailOptions = {
-      from: "theofficialxendex@xendex.com.ng",
-      to: "romeobourne211@gmail.com",
-      subject: "New Form Submission",
-      text: `Name: ${name}\nEmail: ${email}\nPhone Number: ${phoneNumber}\n${productOrService}\n${productOrService}\n${budget}\n${businessSize}\n${virtualMeetingDate}`, // Include other form data
-    };
+        from: "theofficialxendex@xendex.com.ng",
+        to: "romeobourne211@gmail.com",
+        subject: "New Form Submission",
+        html: `
+          <h1>New Form Submission</h1>
+          <p><strong>Name:</strong> ${name}</p>
+          <p><strong>Email:</strong> ${email}</p>
+          <p><strong>Phone Number:</strong> ${phoneNumber}</p>
+          <p><strong>Product or Service of Interest:</strong> ${productOrService}</p>
+          <p><strong>Budget:</strong> ${budget}</p>
+          <p><strong>Business Size:</strong> ${businessSize}</p>
+          <p><strong>Preferred Virtual Meeting Date:</strong> ${virtualMeetingDate}</p>
+          <p>Thank you for your submission!</p>
+        `,
+      };
+      
 
     transporter.sendMail(mailOptions, (error, info) => {
       if (error) {
