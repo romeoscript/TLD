@@ -11,10 +11,10 @@ const page = () => {
 
   return (
     <div className="mt-[100px] text-center text-black">
-      <h2 className="font-bold text-4xl mt-[10rem] mb-[1rem]">
+      <h2 className="font-bold md:text-4xl text-2xl mt-[10rem] mb-[1rem]">
         The <span className="text-[#F16232]">Work</span> We Have Done
       </h2>
-      <p className="w-3/5 m-auto">
+      <p className="md:w-3/5 md:p-0 p-[1rem] m-auto">
         We are technology experts who believe in the power of technology to
         improve people's lives. We have the creative and technical expertise to
         bring your visions to life, no matter what industry you're in. With our
@@ -22,8 +22,8 @@ const page = () => {
         you build a better future for everyone.
       </p>
 
-      <section className="px-[4rem]">
-        <div className="flex items-center justify-between p-[2rem] border-b-2 border-black">
+      <section className="md:px-[4rem] px-[1.5rem]">
+        <div className="flex items-center justify-between md:p-[2rem] p-[0.6rem] border-b-2 border-black">
           <aside>
             <h2 className="text-[#646262]">
               INDUSTRY: ALL{" "}
@@ -62,20 +62,20 @@ const page = () => {
           </aside>
         </div>
         {showListCard ? (
-          <div className="flex items-center justify-between p-[2rem] border-b-[1px] border-grey">
+          <div className="flex items-center justify-between md:p-[2rem] text-left p-[0.6rem] border-b-[1px] border-grey">
             <aside>
-              <h2 className="font-bold text-2xl">Byte Me</h2>
-              <p className="text-[#F16232] uppercase">BRANDING AND DESIGN</p>
+              <h2 className="font-bold md:text-2xl">Byte Me</h2>
+              <p className="text-[#F16232]   text-[12px] uppercase">BRANDING AND DESIGN</p>
             </aside>
             <aside>
-              <div className="flex gap-4">
-                <span className="border-[1px] border-[#F16232] rounded-full p-[0.5rem]">
+              <div className="flex  flex-wrap gap-4">
+                <span className="border-[1px] md:text-[16px] text-[12px] border-[#F16232] rounded-full p-[0.5rem]">
                   branding
                 </span>
-                <span className="border-[1px] border-[#F16232] rounded-full p-[0.5rem]">
+                <span className="border-[1px] md:text-[16px] text-[12px] border-[#F16232] rounded-full p-[0.5rem]">
                   branding
                 </span>
-                <span className="border-[1px] border-[#F16232] rounded-full p-[0.5rem]">
+                <span className="border-[1px] md:text-[16px] text-[12px] border-[#F16232] rounded-full p-[0.5rem]">
                   branding
                 </span>
               </div>
@@ -83,49 +83,49 @@ const page = () => {
           </div>
         ) : (
           <div className="grid grid-cols-2 text-left place-items-center">
-            <div className=" p-[2rem] w-[500px]">
+            <div className=" p-[2rem] md:w-[500px] w-[220px]">
               <img
                 src={pent.src}
-                className="h-[350px] object-contain w-full rounded-md"
+                className="md:h-[350px] object-contain w-full rounded-md"
                 alt=""
               />
               <aside className="my-[1rem]">
-                <h2 className="font-bold text-2xl">Byte Me</h2>
-                <p className="text-[#F16232] uppercase">BRANDING AND DESIGN</p>
+                <h2 className="font-bold md:text-2xl">Byte Me</h2>
+                <p className="text-[#F16232] md:text-[16px] text-[12px] uppercase">BRANDING AND DESIGN</p>
               </aside>
               <aside>
-                <div className="flex gap-4">
-                  <span className="border-[1px] border-[#F16232] rounded-full p-[0.5rem]">
+                <div className="flex flex-wrap gap-4">
+                  <span className="border-[1px]  md:text-[16px] text-[12px] border-[#F16232] rounded-full p-[0.5rem]">
                     branding
                   </span>
-                  <span className="border-[1px] border-[#F16232] rounded-full p-[0.5rem]">
+                  <span className="border-[1px] md:text-[16px] text-[12px] border-[#F16232] rounded-full p-[0.5rem]">
                     branding
                   </span>
-                  <span className="border-[1px] border-[#F16232] rounded-full p-[0.5rem]">
+                  <span className="border-[1px] md:text-[16px] text-[12px] border-[#F16232] rounded-full p-[0.5rem]">
                     branding
                   </span>
                 </div>
               </aside>
             </div>
-            <div className=" p-[2rem] w-[500px]">
+            <div className=" p-[2rem] md:w-[500px] w-[220px]">
               <img
                 src={pent1.src}
-                className="h-[350px] object-contain w-full"
+                className="md:h-[350px]  object-contain w-full"
                 alt=""
               />
               <aside className="my-[1rem]">
-                <h2 className="font-bold text-2xl">Byte Me</h2>
-                <p className="text-[#F16232] uppercase">BRANDING AND DESIGN</p>
+                <h2 className="font-bold md:text-2xl">Byte Me</h2>
+                <p className="text-[#F16232] md:text-[16px] text-[12px] uppercase">BRANDING AND DESIGN</p>
               </aside>
               <aside>
-                <div className="flex gap-4">
-                  <span className="border-[1px] border-[#F16232] rounded-full p-[0.5rem]">
+                <div className="flex flex-wrap gap-4">
+                  <span className="border-[1px] md:text-[16px] text-[12px]  border-[#F16232] rounded-full p-[0.5rem]">
                     branding
                   </span>
-                  <span className="border-[1px] border-[#F16232] rounded-full p-[0.5rem]">
+                  <span className="border-[1px] md:text-[16px] text-[12px] border-[#F16232] rounded-full p-[0.5rem]">
                     branding
                   </span>
-                  <span className="border-[1px] border-[#F16232] rounded-full p-[0.5rem]">
+                  <span className="border-[1px] md:text-[16px] text-[12px] border-[#F16232] rounded-full p-[0.5rem]">
                     branding
                   </span>
                 </div>
