@@ -3,9 +3,9 @@ import abouthero from '../images/abouthero.png'
 
 const AboutHero = () => {
   return (
-    <div className="h-[80vh] mt-[80px] bg-white flex justify-between items-between">
+    <div className="h-[80vh] mt-[80px] bg-white md:flex justify-between items-between">
       <div className="text-black basis-[50%] p-[3rem] flex items-center justify-center flex-col">
-        <figure className="w-4/5">
+        <figure className="md:w-4/5 z-20">
             <p className="text-[#F16232]">About us</p>
           <h2 className="text-5xl leading-[1.2] capitalize ">
           Your Trusted Digital Marketing Partner
@@ -18,10 +18,10 @@ const AboutHero = () => {
           </button>
         </figure>
       </div>
-      <div className="relative h-full  flex items-center justify-center basis-[50%]">
+      <div className="md:relative  absolute top-0  h-full  flex items-center justify-center basis-[50%]">
         <img
           src={abouthero.src}
-          className="w-[70%] h-[full] "
+          className="md:w-[70%] h-[full] "
           alt="met"
         />
        

@@ -4,11 +4,11 @@ import { teamInfo } from "../constants/index";
 const Team = () => {
   return (
     <div className="bg-[#F16232]">
-      <h2 className="text-center p-[3rem]  font-bold text-5xl text-white my-[2rem]">
+      <h2 className="text-center p-[3rem]  font-bold md:text-5xl text-2xl text-white my-[2rem]">
         meet our leadership team
       </h2>
 
-      <div className="grid grid-cols-3  place-items-center p-[2rem] gap-4">
+      <div className="grid md:grid-cols-3 grid-cols-2 place-items-center p-[2rem] gap-4">
         {teamInfo.map((team) => {
           return (
             <div>

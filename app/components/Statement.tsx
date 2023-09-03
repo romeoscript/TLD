@@ -27,7 +27,7 @@ const Statement = () => {
   ];
   return (
     <div>
-      <figure className="flex items-center justify-center m-auto mt-[4rem] w-4/5 gap-4 text-black">
+      <figure className="md:flex  block items-center justify-center m-auto mt-[4rem] w-4/5 gap-4 text-black">
         <aside className="basis-[50%]">
             <img src={aboutinfo.src} className='w-3/5' alt="" />
         </aside>
@@ -59,10 +59,10 @@ const Statement = () => {
         </aside>
       </figure>
 
-      <figure className="flex text-black items-center justify-around my-[5rem] p-[3rem] gap-[2%]">
+      <figure className="flex text-black items-center flex-wrap justify-around my-[5rem] p-[3rem] gap-[2%]">
         {state.map((info) => {
           return (
-            <div className="w-[370px] h-[374px] rounded-md shadow-2xl flex items-center justify-center flex-col p-[2rem] text-center">
+            <div className="w-[370px] h-[374px] rounded-md shadow-2xl flex  items-center justify-center flex-col p-[2rem] text-center">
               <div className="breathing-effect w-[75px] h-[75px] bg-[#FFC7A6] flex items-center justify-center rounded-full">
                 <div className="w-[60px] h-[60px] text-center rounded-full text-white flex items-center justify-center bg-[#F16232]  ">
                   {info.img}
