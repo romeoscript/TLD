@@ -212,7 +212,7 @@ const Presence: React.FC = () => {
         className="absolute top-0 left-0 h-full w-full object-cover"
         alt=""
       />
-      <h2 className="z-20 font-bold text-4xl">
+      <h2 className="z-20 font-bold md:text-4xl text-2xl text-center">
         {first
           ? "Elevate Your Digital Presence With Us"
           : "Ready to Amplify Your Digital Presence?"}

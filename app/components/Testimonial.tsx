@@ -58,7 +58,7 @@ const Testimonial = () => {
         style={{ width: "100%" }}
         modules={[Navigation, Pagination, Autoplay, A11y]}
         spaceBetween={50}
-        slidesPerView={2}
+        slidesPerView={1}
         navigation
         autoplay={{
           delay: 2500,
@@ -67,10 +67,22 @@ const Testimonial = () => {
         pagination={{ clickable: true }}
         onSwiper={(swiper) => console.log(swiper)}
         onSlideChange={() => console.log("slide change")}
+        breakpoints={{
+          // when window width is >= 640px
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          // when window width is >= 768px
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 40,
+          },
+        }}
       >
         {swiperDetails.map((detail, index) => (
           <SwiperSlide key={index} style={{ width: "350px" }}>
-            <div className="text-black w-[450px] h-[320px] bg-white rounded-md px-[4rem] flex flex-col justify-center">
+            <div className="text-black md:w-[450px] h-[320px] bg-white rounded-md px-[4rem] flex flex-col justify-center">
               <div className="text-[#F16232]">
                 <StarIcon />
                 <StarIcon />

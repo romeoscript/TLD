@@ -23,14 +23,14 @@ const Services = () => {
     },
   ];
   return (
-    <div className="bg-[#F16232] relative h-[80vh]">
+    <div className="bg-[#F16232] relative min-h-[80vh]">
         <img src={bubble.src} className="absolute top-0 right-0 h-[100px] w-[100px]" alt="" />
       <h2 className="text-center font-bold text-3xl p-[4rem]">Our Services</h2>
 
-      <div className="flex items-center justify-around  gap-4">
+      <div className="md:flex items-center pd:mb-0 pb-[2rem] justify-around flex-wrap grid gap-4">
         {serviceDetails.map((deets) => {
           return (
-            <div className="h-[350px] w-[350px] flex items-center justify-center flex-col rounded-md bg-white text-black">
+            <div className="md:h-[350px] h-[250px] md:w-[350px] w-[300px] flex items-center justify-center flex-col rounded-md bg-white text-black">
               <img src={deets.img.src} alt="" />
               <h1 className="capitalize text-2xl font-bold my-[1rem]">{deets.title}</h1>
               <p>{deets.test}</p>

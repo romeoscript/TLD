@@ -58,18 +58,18 @@ const Why: React.FC = () => {
 
   return (
     <div>
-      <h1 className="text-black text-center text-4xl capitalize w-[30%] my-[4rem] leading-[1.2] m-auto">
+      <h1 className="text-black text-center text-4xl capitalize md:w-[30%] my-[4rem] leading-[1.2] m-auto">
         Why is timeline digitals the best choice ?
       </h1>
-      <div className="flex relative items-center justify-around p-[2rem]">
+      <div className="md:flex relative items-center justify-around p-[2rem] flex-wrap grid grid-cols-2 gap-4">
         <img ref={img1Ref} src={img1.src} alt="" />
-        <img ref={img2Ref} src={img2.src} className="mt-[11rem]" alt="" />
+        <img ref={img2Ref} src={img2.src} className="md:mt-[11rem] mt-[4rem]" alt="" />
         <img ref={img3Ref} src={img3.src} alt="" />
-        <img ref={img4Ref} src={img4.src} className="mt-[11rem]" alt="" />
+        <img ref={img4Ref} src={img4.src} className="md:mt-[11rem] mt-[4rem]" alt="" />
         {/* Add more images or modify as per your needs */}
       </div>
 
-      <figure className="flex text-black items-center justify-around my-[2rem] gap-[2%]">
+      <figure className="flex text-black items-center justify-around my-[2rem] flex-wrap gap-[2%]">
         {whyDeets.map((info) => {
           return (
             <div>
