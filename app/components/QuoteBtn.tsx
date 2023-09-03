@@ -1,8 +1,8 @@
 "use client";
+import React, { useState } from "react";
 import Box from "@mui/material/Box";
 import axios from "axios";
-import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
+
 import Modal from "@mui/material/Modal";
 import TextField from "@mui/material/TextField";
 import {
@@ -12,7 +12,8 @@ import {
   FormControl,
   FormLabel,
 } from "@mui/material";
-import { useState } from "react";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const style = {
   position: "absolute",
@@ -32,10 +33,10 @@ const BasicModal = () => {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
-  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event:any) => {
     event.preventDefault();
 
-    const formData = new FormData(event.currentTarget);
+    const formData = new FormData(event.target);
     const data = {
       name: formData.get("fullname"),
       email: formData.get("email"),
@@ -50,10 +51,11 @@ const BasicModal = () => {
     try {
       const response = await axios.post("api/quote", data);
       console.log("Form submitted successfully", response.data);
-      // Handle success or any response data
+      toast.success("Form submitted successfully");
+      event.target.reset(); // Clear form input fields
     } catch (error) {
       console.error("Error submitting form", error);
-      // Handle error
+      toast.error("Error submitting form");
     }
   };
 
@@ -70,7 +72,6 @@ const BasicModal = () => {
         onClose={handleClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
-       
       >
         <Box sx={style}>
           <form onSubmit={handleSubmit} className="w-full text-black z-30">

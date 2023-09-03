@@ -9,7 +9,7 @@ const transporter = nodemailer.createTransport({
   port: 465,
   auth: {
     user: "theofficialxendex@xendex.com.ng",
-    pass: "MH65Fu9GgDSA",
+    pass: process.env.PASS_KEY,
   },
 });
 
