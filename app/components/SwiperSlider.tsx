@@ -1,23 +1,14 @@
-// import Swiper core and required modules
 "use client";
-import {
-  Navigation,
-  Pagination,
-  Scrollbar,
-  A11y,
-  Autoplay,
-} from "swiper/modules";
 import rect1 from "../images/Rectangle 17.png";
 import rect2 from "../images/Rectangle 18.png";
 import rect3 from "../images/Rectangle 19.png";
-
-import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+import Slider from "./Slider";
 
 const SwiperSlider = () => {
   const swiperDetails = [
@@ -42,46 +33,29 @@ const SwiperSlider = () => {
       details: " 5 ways you can grow your brand organically",
     },
   ];
+  
   return (
-    <div className="flex items-center w-4/5 m-auto my-[2rem] justify-center flex-col text-black ">
-       <h2 className="text-center font-bold text-3xl my-[3rem]">Check out  Our blog</h2>
-      <Swiper
-        // Install Swiper modules
-        style={{ width: '100%' }}
-        modules={[Navigation, Pagination, Autoplay, A11y]}
-        spaceBetween={50}
-        slidesPerView={1}
-        autoplay={{
-          delay: 2500,
-          disableOnInteraction: false,
-        }}
-        pagination={{ clickable: true }}
-        onSwiper={(swiper) => console.log(swiper)}
-        onSlideChange={() => console.log("slide change")}
-        breakpoints={{
-          // when window width is >= 640px
-          640: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-          },
-          // when window width is >= 768px
-          768: {
-            slidesPerView: 3,
-            spaceBetween: 40,
-          },
-        }}
-      >
-       
-       {swiperDetails.map((detail, index) => (
-          <SwiperSlide key={index} style={{width:'350px'}}>
-            <div className="text-black w-[350px]">
-              <img src={detail.img.src} alt="" className="w-full h-[240px]" />
-              <h2 className="text-2xl font-bold my-[1.5rem]">{detail.details}</h2>
+    <div className="flex flex-col items-center justify-center w-4/5 mx-auto my-8">
+      <h2 className="text-center text-black font-bold text-3xl mb-12">
+        Check out Our blog
+      </h2>
+
+      <div className="w-full">
+        <Slider>
+          {swiperDetails.map((detail, index) => (
+            <div
+              className="text-black w-[320px] mx-auto"
+              key={index}
+            >
+              <img src={detail.img.src} alt="" className="w-full h-60 object-cover mb-6" />
+              <h2 className="text-2xl font-bold mb-4">
+                {detail.details}
+              </h2>
               <p className="text-[#F16232]">Read more ...</p>
             </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+          ))}
+        </Slider>
+      </div>
     </div>
   );
 };
