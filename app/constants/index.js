@@ -5,6 +5,7 @@ import rec4 from '../images/rectangle 37.png'
 import rec5 from '../images/rectangle 38.png'
 import rec6 from '../images/rectangle 39.png'
 
+
 export const navLinks = [
   {
     id: "home",
