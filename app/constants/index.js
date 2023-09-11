@@ -1,9 +1,10 @@
-import rec1 from '../images/rectangle 34.png'
-import rec2 from '../images/rectangle 35.png'
-import rec3 from '../images/rectangle 36.png'
-import rec4 from '../images/rectangle 37.png'
-import rec5 from '../images/rectangle 38.png'
-import rec6 from '../images/rectangle 39.png'
+
+import rec1 from '../images/rec1.png'
+import rec2 from '../images/rec2.png'
+import rec3 from '../images/rec3.png'
+import rec4 from '../images/rec4.png'
+import rec5 from '../images/rec5.png'
+import rec6 from '../images/rec6.png'
 
 
 export const navLinks = [
