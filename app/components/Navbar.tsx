@@ -4,7 +4,7 @@ import Link from "next/link";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import CloseOutlinedIcon from "@mui/icons-material/CloseOutlined";
 
-const navbar = () => {
+const Navbar = () => {
   const [showMobile, setShowMobile] = useState(false);
 
   return (
@@ -52,4 +52,4 @@ const navbar = () => {
   );
 };
 
-export default navbar;
+export default Navbar;

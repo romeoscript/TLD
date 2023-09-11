@@ -60,9 +60,9 @@ const Statement = () => {
       </figure>
 
       <figure className="flex text-black items-center flex-wrap justify-around my-[5rem] p-[3rem] gap-[2%]">
-        {state.map((info) => {
+        {state.map((info, index) => {
           return (
-            <div className="w-[370px] h-[374px] rounded-md shadow-2xl flex  items-center justify-center flex-col p-[2rem] text-center">
+            <div className="w-[370px] h-[374px] rounded-md shadow-2xl flex  items-center justify-center flex-col p-[2rem] text-center" key={index}>
               <div className="breathing-effect w-[75px] h-[75px] bg-[#FFC7A6] flex items-center justify-center rounded-full">
                 <div className="w-[60px] h-[60px] text-center rounded-full text-white flex items-center justify-center bg-[#F16232]  ">
                   {info.img}

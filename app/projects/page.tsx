@@ -4,7 +4,7 @@ import pent from "../images/ORANGE DESIGN 2 1.png";
 import pent1 from "../images/image 1.png";
 import AddIcon from "@mui/icons-material/Add";
 
-const page = () => {
+const Page = () => {
   const [listActive, setListActive] = useState(true);
   const [cardActive, setCardActive] = useState(false);
   const [showListCard, setShowhowListCard] = useState(true);
@@ -16,8 +16,8 @@ const page = () => {
       </h2>
       <p className="md:w-3/5 md:p-0 p-[1rem] m-auto">
         We are technology experts who believe in the power of technology to
-        improve people's lives. We have the creative and technical expertise to
-        bring your visions to life, no matter what industry you're in. With our
+        improve people&apos;s lives. We have the creative and technical expertise to
+        bring your visions to life, no matter what industry you&apos;re in. With our
         extensive experience and knowledge from around the globe, we can help
         you build a better future for everyone.
       </p>
@@ -142,4 +142,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

@@ -9,9 +9,9 @@ const Team = () => {
       </h2>
 
       <div className="grid md:grid-cols-3 grid-cols-2 place-items-center p-[2rem] gap-4">
-        {teamInfo.map((team) => {
+        {teamInfo.map((team,index) => {
           return (
-            <div>
+            <div key={index}>
               <img src={team.img.src} alt="" className="w-[350px] h-[364px] object-cover" />
               <h2 className="font-bold text-2xl">
                 {team.name}

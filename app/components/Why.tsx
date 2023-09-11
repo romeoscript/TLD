@@ -70,9 +70,9 @@ const Why: React.FC = () => {
       </div>
 
       <figure className="flex text-black items-center justify-around my-[2rem] flex-wrap gap-[2%]">
-        {whyDeets.map((info) => {
+        {whyDeets.map((info,index) => {
           return (
-            <div>
+            <div key={index}>
               <div className="w-[300px] flex items-center justify-center flex-col text-center">
                 <div className="breathing-effect w-[75px] h-[75px] bg-[#FFC7A6] flex items-center justify-center rounded-full">
                   <div className="w-[60px] h-[60px] text-center rounded-full text-white flex items-center justify-center bg-[#F16232]  ">
