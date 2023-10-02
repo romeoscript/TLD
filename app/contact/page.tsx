@@ -1,7 +1,33 @@
+"use client";
 import React from "react";
 import { TextField } from "@mui/material";
+import axios from "axios";
+
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Contact = () => {
+  const handleSubmit = async (event: any) => {
+    event.preventDefault();
+
+    const formData = new FormData(event.target);
+    const data = {
+      name: formData.get("name"),
+      email: formData.get("email"),
+      message: formData.get("message"),
+    };
+    console.log(data);
+
+    try {
+      const response = await axios.post("api/contact", data);
+      console.log("Form submitted successfully", response.data);
+      toast.success("Form submitted successfully");
+      event.target.reset(); // Clear form input fields
+    } catch (error) {
+      console.error("Error submitting form", error);
+      toast.error("Error submitting form");
+    }
+  };
   return (
     <>
       <section className="bg-dark p-20 lg:py-[120px] overflow-hidden relative z-10 text-[#F16232]">
@@ -78,7 +104,7 @@ const Contact = () => {
                       Email Address
                     </h4>
                     <p className="text-base text-body-color">
-                      info@yourdomain.com
+                      info@timelinedigitals.com
                     </p>
                   </div>
                 </div>
@@ -89,7 +115,7 @@ const Contact = () => {
                 <form
                   action="mailto:romeobourne@gmail.com"
                   method="post"
-                  enctype="text/plain"
+                  onSubmit={handleSubmit}
                 >
                   <TextField
                     name="name"
