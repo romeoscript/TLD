@@ -2,12 +2,13 @@ import React from 'react';
 import LetsWork from '../components/LetsWorkTogether';
 
 // service icons 
-import icon1 from '../img/services/instaicon.png';
-import mail from '../img/services/mail.png';
-import seo from '../img/services/seo.png';
-import content from '../img/services/content.png';
-import share from '../img/services/share.png';
-import web from '../img/services/web.png';
+
+import icon1 from '../images/services/instaicon.png';
+import mail from '../images/services/mail.png';
+import seo from '../images/services/seo.png';
+import content from '../images/services/content.png';
+import share from '../images/services/share.png';
+import web from '../images/services/web.png';
 
 
 const page = () => {

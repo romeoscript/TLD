@@ -3,6 +3,7 @@ import megaphone from "../images/bi_megaphone.png";
 import brand from "../images/iconoir_design-nib.png";
 import desktop from "../images/mi_computer.png";
 import bubble from "../images/bubble.png";
+import '../services.scss'
 
 const Services = () => {
   const serviceDetails = [
