@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const LetsWorkTogether = () => {
     return( 
-        <section className="lead">
+        <section className="lead py-[1rem]">
             <div className="container text-center">
                 <div className="row align-items-center">
                     <div className="col-12">
