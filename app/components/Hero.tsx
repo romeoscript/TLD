@@ -9,13 +9,12 @@ const Hero = () => {
       <aside className="text-black basis-[50%] md:p-[3rem] p-[1.5rem] md:relative z-[22] absolute  flex items-center justify-center flex-col">
         <figure className="md:w-4/5 w-full">
           <h2 className="md:text-5xl text-4xl md:text-left text-center leading-[1.2] capitalize ">
-            Grow your <br />
-            <span className="text-[#F16232]">business</span> with our digital
-            marketing expertise
+         
+          Elevate your <br />
+            <span className="text-[#F16232]">business</span>  with our digital marketing expertise 
           </h2>
-          <p className="py-[2rem] md:w-3/5 w-full md:font-normal md:text-black text-[#F16232] ">
-            being lost in the digital is not an option. Our SEO experts wield
-            their magic to put your brand front and center
+          <p className="py-[2rem] md:w-4/5 w-full md:font-normal md:text-black text-[#F16232] ">
+          Don’t get lost in the digital world, let TLD lead you to digital greatness or Don’t get lost in the digital world; let Timeline Digitals lead you to greater digital heights. 
           </p>
           <button className="bg-[#F16232]  rounded-md text-white px-[2rem] py-[0.5rem]">
             Get Started

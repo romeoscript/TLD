@@ -8,12 +8,13 @@ const ServiceDigital = () => {
         <img src={brandimg.src} alt="" />
       </div>
       <div className="text-black md-mt-0 mt-[1.5rem] basis-[50%]">
-        <h2 className="text-4xl leading-[1.2] capitalize md:w-3/5">full service digital marketing agency</h2>
+        <h2 className="text-4xl leading-[1.2] capitalize md:w-3/5">
+          full service digital marketing agency
+        </h2>
         <p className="my-[1rem] md:w-3/5 leading-[1.6]">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt
-          mollitia at, quam dicta, expedita aperiam voluptas placeat facilis
-          iure, officia ducimus omnis animi ut porro dignissimos fugit. Rem,
-          magnam error!
+          At Timeline Digitals, we don't just offer digital solutions; we create
+          tailored strategies that announces your brand's online presence. Our
+          mission is to increase your business’s visibility online
         </p>
       </div>
     </div>

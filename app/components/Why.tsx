@@ -15,17 +15,17 @@ const Why: React.FC = () => {
     {
       img: <ShieldOutlinedIcon />,
       title: "Organic reach",
-      detials: "oh shes sweet but a pshyco and is shsieinndaididfindfndifidf",
+      detials: "With our creative solutions, your business is certain to grow organically and effectively reach its target audience. ",
     },
     {
       img: <BoltOutlinedIcon />,
       title: "Brand growth",
-      detials: "oh shes sweet but a pshyco and is shsieinndaididfindfndifidf",
+      detials: "Brands need digital growth and we have just the right plan of action to make this happen. ",
     },
     {
       img: <HandshakeOutlinedIcon />,
       title: "effective  traffic",
-      detials: "oh shes sweet but a pshyco and is shsieinndaididfindfndifidf",
+      detials: "Part of our digital solutions are creating Call-to-Action strategies that make the traffic you receive very effective. ",
     },
   ];
   // Create references for the images
