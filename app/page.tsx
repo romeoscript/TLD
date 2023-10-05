@@ -1,17 +1,15 @@
-"use client"
+"use client";
 import Hero from "./components/Hero";
 import Presence from "./components/Presence";
 import ServiceDigital from "./components/ServiceDigital";
 import Services from "./components/Services";
-import Slider from "./components/Slider";
 import SwiperSlider from "./components/SwiperSlider";
+import Testi from "./components/Testi";
 import Testimonial from "./components/Testimonial";
 import Why from "./components/Why";
 import bubble from "./images/bubble.png";
 
-
 export default function Home() {
-
   return (
     <main className="">
       <Hero />
@@ -19,7 +17,7 @@ export default function Home() {
       <Why />
       <Services />
       <SwiperSlider />
-     
+
       <section className="bg-[#F16232] relative h-[70vh] relative">
         <img
           src={bubble.src}
@@ -29,6 +27,7 @@ export default function Home() {
         <Testimonial />
       </section>
       <Presence />
+
     </main>
   );
 }

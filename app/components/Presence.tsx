@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import BasicModal from "./QuoteBtn";
 import bg from "../images/bg.png";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 const Presence: React.FC = () => {
   const [first, setfirst] = useState<boolean>(false);
@@ -29,9 +30,13 @@ const Presence: React.FC = () => {
       </h2>
       <p className="z-20 my-[4rem]">Don’t wait any longer!</p>
       {first ? (
+       
         <button className="bg-[#F16232] rounded-md text-white px-[2rem] py-[0.5rem] z-20">
-          Contact us
+           <Link href='/contact'>  Contact us</Link>
+         
+
         </button>
+      
       ) : (
         <BasicModal />
       )}
