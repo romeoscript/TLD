@@ -5,7 +5,7 @@ import female from "../images/female_profile.png";
 import StarIcon from "@mui/icons-material/Star";
 import StarBorderIcon from "@mui/icons-material/StarBorder";
 import Slider from "./Slider";
-import Testi from "./Testi";
+
 
 const Testimonial = () => {
  
@@ -16,7 +16,7 @@ const Testimonial = () => {
         Hear From Our Past Clients
       </h2>
       <p className="text-white pb-[3rem]">Testimonials</p>
-      {/* <Testi /> */}
+
     </div>
   );
 };
