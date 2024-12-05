@@ -4,7 +4,6 @@ import Presence from "./components/Presence";
 import ServiceDigital from "./components/ServiceDigital";
 import Services from "./components/Services";
 import SwiperSlider from "./components/SwiperSlider";
-import Testi from "./components/Testi";
 import Testimonial from "./components/Testimonial";
 import Why from "./components/Why";
 import bubble from "./images/bubble.png";
