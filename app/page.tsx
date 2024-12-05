@@ -24,7 +24,7 @@ export default function Home() {
           className="absolute top-0 right-0 h-[100px] w-[100px]"
           alt=""
         />
-        <Testimonial />
+        {/* <Testimonial /> */}
       </section>
       <Presence />
 

@@ -16,7 +16,7 @@ const Testimonial = () => {
         Hear From Our Past Clients
       </h2>
       <p className="text-white pb-[3rem]">Testimonials</p>
-      <Testi />
+      {/* <Testi /> */}
     </div>
   );
 };

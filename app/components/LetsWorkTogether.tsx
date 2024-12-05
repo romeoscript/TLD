@@ -9,7 +9,7 @@ const LetsWorkTogether = () => {
                     <div className="col-12">
                         <div className="lead-title text-white mb-5 mt-4">
                             <h1 className="title-font">
-                            Let's work together
+                            Let&rsquo;s work together
                             </h1>
                             <p className="mt-4 mb-4 title-font-2">
                             Scaling-up your business 
