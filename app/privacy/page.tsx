@@ -7,7 +7,7 @@ const PrivacyPolicy = () => {
       <h1 className="text-3xl font-bold text-center">Privacy Policy for Timelines Digitals</h1>
 
       <p className="text-lg">
-        At Timelines Digitals, accessible at timelinedigitals.com, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by Timelines Digitals and how we use it. If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us through email at{" "}
+        At Timeline Digitals, accessible at timelinedigitals.com, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by Timelines Digitals and how we use it. If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us through email at{" "}
         <a href="mailto:support@timelinedigitals.com" className="text-blue-600">support@timelinedigitals.com</a>.
       </p>
 
