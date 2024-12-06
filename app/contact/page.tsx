@@ -42,7 +42,7 @@ const Contact = () => {
                   GET IN TOUCH WITH US
                 </h2>
                 <p className="text-base leading-relaxed mb-9 text-body-color">
-                 Want to get in touch ? we'd love to hear from you. Here's how you can reach us ....
+                 Want to get in touch ? we&lsquo;d love to hear from you. Here&lsquo;s how you can reach us ....
                 </p>
                 <div className="mb-8 flex w-full max-w-[370px]">
                   <div className="mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded bg-primary bg-opacity-5 text-primary sm:h-[70px] sm:max-w-[70px]">
