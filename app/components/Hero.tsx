@@ -52,7 +52,7 @@ const Hero = () => {
             greatness or Don’t get lost in the digital world; let Timeline
             Digitals lead you to greater digital heights.
           </p>
-          <Link href='/contact'>
+          <Link href='/Register'>
             <button className="bg-[#F16232]  rounded-md text-white px-[2rem] py-[0.5rem]">
               Get Started
             </button>

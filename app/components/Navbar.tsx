@@ -25,9 +25,13 @@ const Navbar = () => {
         </Link>
       </ul>
       <div>
-        <button className="bg-white rounded-md text-[#F16232] px-[2rem] mr-[0.6rem] py-[0.5rem]">
+        <Link href="/Register">
+            <button className="bg-white rounded-md text-[#F16232] px-[2rem] mr-[0.6rem] py-[0.5rem]">
           Get Started
         </button>
+          </Link>
+
+      
         <span className="md:hidden inline">
         {showMobile ? <CloseOutlinedIcon onClick={()=> setShowMobile(!showMobile)} /> : <MenuOutlinedIcon onClick={()=> setShowMobile(!showMobile)}/>}
         </span>

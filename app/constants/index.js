@@ -102,7 +102,7 @@ export const support = [
     title: "Support",
     links: [
       {
-        name: "+234 705 374 23",
+        name: "+447780108116",
         link: "/privacy",
       },
       {
@@ -114,8 +114,8 @@ export const support = [
         link: "/blog",
       },
       {
-        name: "Help center",
-        link: "/terms",
+        name: "Login",
+        link: "/Login",
       },
       {
         name: "Connect with TLD",
